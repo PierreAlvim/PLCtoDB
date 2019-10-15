@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group 'br.com.zecon'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.hibernate:hibernate-core:5.4.2.Final'
+    compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.13'
+    
+    compileOnly 'org.projectlombok:lombok:1.18.10'
+    annotationProcessor 'org.projectlombok:lombok:1.18.10'
+
+    implementation 'com.google.code.gson:gson:2.8.6'
+}
+
+application {
+    mainClassName = 'br.com.zecon.TesteDB'
+}
